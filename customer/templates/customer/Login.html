@@ -1,0 +1,43 @@
+{% extends 'customer/Home.html' %}
+{% block content %}
+
+<div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h2 class="text-center" style="font-size: 2em; margin-bottom: 20px;">Login</h2>
+            <form id="loginForm" novalidate method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"  name="name" class="form-control" id="name" placeholder="Enter your name" required style="border-radius: 20px; padding: 10px; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px;">
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required style="border-radius: 20px; padding: 10px; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px;">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required minlength="5" style="border-radius: 20px; padding: 10px; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px;">
+                    <div class="invalid-feedback">Password must be at least 5 characters long.</div>
+                </div><br>
+                <button type="submit"  style=" width: 250px;border-radius: 25px; padding: 10px 20px; background: linear-gradient(45deg, #e99cb3, #bc88cc); border: none; margin-left: 50px;">Login</button>
+                <p style="color: brown;">{{msg}}</p>
+            </form>
+</div>
+
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var form = document.getElementById('loginForm');
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+    })();
+</script>
+    {% endblock %}

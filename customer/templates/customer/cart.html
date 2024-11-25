@@ -1,0 +1,27 @@
+{% extends 'customer/Home.html' %}
+{% load static %}
+{% block content %}
+<h1>Cart</h1>
+<p>Total Quantity: {{ total_quantity }} </p>
+<h3>GRAND TOTAL: {{ grand_total }}</h3>
+<div class="container-fluid">
+    <div class="row">
+        {% for i in cart_items %}
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="{{ i.product.image.url }}" class="card-img-top" alt="{{ i.product.product_name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i.product.product_name }}</h5>
+                    <p class="card-text"><i class="fas fa-rupee-sign"></i>{{ i.product.price }}</p>
+                    <form action="{% url 'customer:remove_from_cart' i.product_id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

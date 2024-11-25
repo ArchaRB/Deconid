@@ -1,0 +1,201 @@
+{% extends 'customer/Home.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .image-container {
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .image-container:hover {
+        transform: scale(1.05);
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        padding: 10px;}
+</style>
+<div class="container_fluid ">
+    <div class="col_12">
+    <table>
+    <tr>
+        <td class="image-container" id="sectionals" >
+            <a href="{% url 'customer:view_category' 'Sectional sofas' %}"><img src="{% static 'images/h2.webp' %}" alt="Image 1" style="width:100%;" ></a>
+        </td>
+        <td class="image-container" id="dinings">
+            <a href="{% url 'customer:view_category' 'Dining tables' %}" ><img src="{% static 'images/h21.webp' %}" alt="Image 2" style="width:100%;" ></a>
+        </td>
+        <td class="image-container" id="bedrooms">
+            <a href="{% url 'customer:view_category' 'Book cases' %}" ><img src="{% static 'images/h22.webp' %}" alt="Image 3" style="width:100%;" ></a>
+        </td>
+        <td class="image-container" >
+            <a href="{% url 'customer:view_category' 'Beds,Wall shelves' %}" id="store"><img src="{% static 'images/h23.webp' %}" alt="Image 3" style="width:100%;"></a>
+        </td>
+
+    </tr>
+    <tr>
+        <td class="image-container" >
+            <a href="{% url 'customer:view_category' 'Coffee tables' %}" id="outd"><img src="{% static 'images/h24.webp' %}" alt="Image 3" style="width:100%;"></a>
+        </td>
+
+        <td class="image-container" >
+            <a href="{% url 'customer:view_category' 'Sofas' %}" id="offi"><img src="{% static 'images/h25.webp' %}" alt="Image 4" style="width:100%;"></a>
+        </td>
+        <td class="image-container" >
+            <a href="{% url 'customer:view_category' 'Home temples' %}" id="hmtpl"><img src="{% static 'images/temple.png' %}" alt="Image 5" style="width:100%;"></a>
+        </td>
+        <td class="image-container " >
+            <a href="{% url 'customer:view_category' 'Fall sale' %}" id="fallsales"><img src="{% static 'images/imghome4.webp' %}" alt="Image 6" style="width:100%;"></a>
+        </td>
+    </tr>
+    </table><br><br><br>
+
+
+
+    <div class="container-fluid">
+      <div class="col-12">
+
+        <div class="container">
+        <div class="row" style="margin-top: 30px;">
+        <div class="col-12">
+            <h2 style="color: black; font-weight: 800;">Beautifully made, thoughtfully designed</h2>
+            <p style="color: black;">Our furniture seamlessly blends enduring thoughtful design, 
+              and everyday functionality, ensuring <br> lasting beauty and comfort in your home. </p>
+        </div>
+      </div>
+        </div>
+        <div class="container">
+
+      <div class="row">
+        <div class="col-md-6 position-relative">
+            <img src="{%  static 'images/beatifully1.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+            <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 1</button>
+        </div>
+        <div class="col-md-6 position-relative">
+            <img src="{% static 'images/beatifully2.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+            <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 2</button>
+        </div>
+      <div class="row">
+      <div class="col-12">
+        <br><br><br>
+          <h2 style="color: black; font-weight: 800; ">Welcome to your dream sanctuary</h2>
+          <p style="color: black;">From cozy duvet covers to vibrant pillows, create a restful retreat in every corner of your home. </p>
+      </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-6 position-relative">
+            <img src="{% static 'images/welcome1.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+            <button type="button" class="btn  position-absolute" style="top: 10px;; left: 50px; color: black; background-color: white;"><i class="fas fa-arrow-right"></i> <br> <strong>StockHOLM </strong><br> Nest of tables, <br> Set of 2 <br>
+              <strong>Rs.18900</strong></button>
+
+        </div>
+        <div class="col-md-6 position-relative" >
+            <div class="row">
+                <div class="col-6" style="margin-bottom: 30px;">
+                    <img src="{% static 'images/welcome2.avif' %}" alt="avif-file" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-6" style="margin-bottom: 30px;">
+                    <img src="{% static 'images/welcome03.jpg' %}" alt="image" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-6">
+                    <img src="{% static 'images/welcome05.jpg' %}" alt="image3" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-6">
+                    <img src="{% static 'images/welcome4.webp' %}" alt="avif-file" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+       </div>
+       <div class="container-fluid">
+        <div class="col-12">
+  
+          <div class="container">
+          <div class="row" style="margin-top: 30px;">
+          <div class="col-12">
+              <h2 style="color: black; font-weight: 800;">Beautifully made, thoughtfully designed</h2>
+              <p style="color: black;">Our furniture seamlessly blends enduring thoughtful design, 
+                and everyday functionality, ensuring <br> lasting beauty and comfort in your home. </p>
+          </div>
+        </div>
+          </div>
+          <div class="container">
+  
+        <div class="row">
+          <div class="col-md-6 position-relative">
+              <img src="{%  static 'images/beatifully1.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+              <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 1</button>
+          </div>
+          <div class="col-md-6 position-relative">
+              <img src="{% static 'images/beatifully2.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+              <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 2</button>
+          </div> <br><br>
+      </div><br><br>
+
+      <div class="container">
+        <div class="row" style="margin-top: 30px;">
+           <div class="col-12">
+            <h2 style="color: black; font-weight: 800;">Keep your bedroom calm and clutter-free</h2>
+            <p style="color: black;">Getting the perfect ambience for a good night's sleep means your room should 
+                be tidy, calm and relaxing. Choosing a bed that helps keep clutter away lets you save on floor
+                 space and have extra storage for all your belongings. So you can focus on those precious zzz's. </p>
+           </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 position-relative">
+            <img src="{%  static 'images/calm1.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+            <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 1</button>
+        </div>
+        <div class="col-md-6 position-relative">
+            <img src="{% static 'images/calm2.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+            <button type="button" class="btn position-absolute" style="bottom: 10px; left: 10px;">Button 2</button>
+        </div>
+
+       </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <br><br><br>
+            <h2 style="color: black; font-weight: 800; ">A touch of green</h2>
+            <p style="color: black;">Bring calm and comfort to your home and relax in style.</p>
+        </div>
+      </div>
+      <div class="row" >
+          <div class="col-md-6 position-relative">
+              <img src="{% static 'images/grn1.avif' %}" alt="avif-file" style="max-width: 100%; height: auto;">
+              <button type="button" class="btn  position-absolute" style="top: 10px;; left: 50px; color: black; background-color: white;"><i class="fas fa-arrow-right"></i> <br> <strong>StockHOLM </strong><br> Nest of tables, <br> Set of 2 <br>
+                <strong>Rs.18900</strong></button>
+  
+          </div>
+          <div class="col-md-6 position-relative" >
+              <div class="row">
+                  <div class="col-6 col-sm-6" style="margin-bottom: 30px;">
+                      <img src="{% static 'images/grn2.webp' %}" alt="webp-file" style="width: 100%; height: auto;">
+                  </div>
+                  <div class="col-6 col-sm-6" style="margin-bottom: 30px;">
+                      <img src="{% static 'images/grn3.jpg' %}" alt="jpg-image" style="width: 100%; height: auto;">
+                  </div>
+                  <div class="col-6 col-sm-6">
+                      <img src="{% static 'images/grn4.avif' %}" alt="avif-file" style="width: 100%; height: auto;">
+                  </div>
+                  <div class="col-6 col-sm-6">
+                      <img src="{% static 'images/grn5.avif' %}" alt="avif-file" style="width: 100%; height: auto;">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+       </div>
+  
+    </div>
+</div>
+
+{%  endblock  %}

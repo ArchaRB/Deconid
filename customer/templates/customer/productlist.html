@@ -1,0 +1,81 @@
+{% extends 'customer/Home.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/seating hero.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/seating hero.webp' %}" alt="" class="img-fluid"></a> 
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products </button>        {%  endif %}
+    </div> <br><br>   
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/DINING HERO.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/DINING HERO.webp' %}" alt="" class="img-fluid"></a> 
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products</button>    {% endif %}
+    </div><br><br>    
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/bedroom hero.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/bedroom hero.webp' %}" alt="" class="img-fluid"></a>
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products</button>    {% endif %}
+    </div>   <br><br> 
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/storage PLP hero.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/storage PLP hero.webp' %}" alt="" class="img-fluid"></a>
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products</button>    {% endif %}
+    </div><br><br>
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/office-hero.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/office-hero.webp' %}" alt="" class="img-fluid"></a>
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products</button>    {% endif %}
+    </div><br><br>
+    <div class="col-12">
+        {% if 'customer' in request.session %} 
+        <a href="{% url 'customer:view_products' 'Fall sale' %}">
+            <img src="{% static 'images/outdoor-hero.webp' %}" alt="" class="img-fluid">
+        </a> 
+            {% else %} 
+        <a href="{% url 'customer:Login' %}"><img src="{% static 'images/outdoor-hero.webp' %}" alt="" class="img-fluid"></a>
+        <button class="btn btn-primary w-100" style="margin-left: 0; padding: 10px 20px; background-color: rgb(30, 42, 53); border: none; color: white; font-weight: bold; cursor: pointer;"> Login to view products</button>    {% endif %}
+    </div><br><br><br><br>
+    </div>
+
+
+    <style> 
+        .col-12:hover .hover-message { 
+            opacity: 1; 
+        }
+        .btn {  
+            display: none; 
+             } 
+        .col-12:hover .btn { 
+            display: block; 
+            }    
+    </style>
+
+
+
+
+
+{% endblock %}

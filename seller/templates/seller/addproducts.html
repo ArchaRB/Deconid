@@ -1,0 +1,37 @@
+{% extends 'seller/home.html' %}
+{% block content %}
+{% load static %}
+<div class="container" style="margin-top: 50px;">
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productname" name="productname" placeholder="Enter product name" required>
+    </div>
+    <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea class="form-control" id="productdescription" name="productdescription" rows="3" placeholder="Enter product description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="productCategory">Product Category</label>
+        <select name="productcategory" id="category" class="form-select" required>
+            <option value="" disabled selected>Select Category</option>
+            {% for i in categories %}
+                <option value="{{ i.id }}">{{ i.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input type="number" class="form-control" id="productprice" name="productprice" placeholder="Enter product price" required>
+    </div>
+    <div class="form-group">
+        <label for="productImage">Product Image</label>
+        <input type="file" class="form-control" id="productimage" name="productimage" required>
+    </div> <br><br>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+    <a href="{% url 'seller:viewproducts' %}" class="btn btn-primary" style="margin-left: 20px;">View product</a>
+    {{ msg }}
+</form>
+</div>
+{% endblock %}
