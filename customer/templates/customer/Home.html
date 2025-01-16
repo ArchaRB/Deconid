@@ -128,7 +128,13 @@
                           Fall Sale
                         </a>
                         <ul class="dropdown-menu"  style="width: 100vw;">
+                          {% if 'customer' in request.session %} 
                           <li><a class="dropdown-item" href="{% url 'customer:view_category' 'Fall sale' %}">Fall sale items</a></li>
+                          {% else %} 
+                          <li>
+                            <a class="dropdown-item" href="{% url 'customer:Login' %}">Please login to view items</a>
+                          </li> 
+                          {% endif %}  
                         </ul>
                       </li>
                       
